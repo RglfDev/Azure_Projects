@@ -1,0 +1,926 @@
+/* =============================
+   IMPORTS & FONTS
+   ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700&display=swap');
+
+/* =============================
+   RESET & BASE
+   ============================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 0;
+    background-color: #020b14;
+    color: #c8ddf0;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+    body > .container {
+        flex: 1;
+    }
+
+/* =============================
+   NAVBAR
+   ============================= */
+.navbar {
+    background-color: #041220 !important;
+    border-bottom: 1px solid #0d3a5c !important;
+    box-shadow: 0 2px 20px rgba(0, 212, 255, 0.08) !important;
+    padding: 0.6rem 1rem;
+}
+
+.navbar-brand {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    color: #00d4ff !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+    .navbar-brand::before {
+        content: '> ';
+        color: #00ff9d;
+    }
+
+.nav-link {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 400;
+    color: #4a7fa5 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: color 0.2s;
+    padding: 0.5rem 1rem !important;
+}
+
+    .nav-link:hover {
+        color: #00d4ff !important;
+    }
+
+.navbar-toggler {
+    border-color: #0d3a5c !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(60%) sepia(80%) saturate(400%) hue-rotate(170deg);
+}
+
+/* =============================
+   MAIN CONTAINER
+   ============================= */
+.container {
+    max-width: 1200px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+main {
+    padding-bottom: 1rem;
+}
+
+/* =============================
+   TIPOGRAFÍA GENERAL
+   ============================= */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    color: #00d4ff;
+    letter-spacing: 1px;
+}
+
+p {
+    color: #4a7fa5;
+}
+
+a {
+    color: #00d4ff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+    a:hover {
+        color: #00ff9d;
+    }
+
+code {
+    font-family: 'Share Tech Mono', monospace;
+    color: #00ff9d;
+    background: rgba(0, 255, 157, 0.06);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+    font-size: 0.85em;
+}
+
+/* =============================
+   TABLAS
+   ============================= */
+.table {
+    color: #c8ddf0;
+    border-color: #0d3a5c;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.9rem;
+}
+
+    .table thead tr {
+        background-color: #071a2e;
+        color: #00d4ff;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.78rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #0d3a5c;
+    }
+
+    .table thead th {
+        border-color: #0d3a5c;
+        font-weight: 400;
+        padding: 0.75rem 1rem;
+    }
+
+    .table tbody tr {
+        background-color: #041220;
+        border-color: #0d3a5c;
+        transition: background 0.15s;
+    }
+
+        .table tbody tr:hover {
+            background-color: #071a2e;
+        }
+
+    .table tbody td {
+        border-color: #0d3a5c;
+        padding: 0.65rem 1rem;
+        vertical-align: middle;
+    }
+
+.table-responsive {
+    border: 1px solid #0d3a5c;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
+}
+
+.table-info thead tr,
+.table-secondary thead tr {
+    background-color: #071a2e;
+    color: #00d4ff;
+}
+
+/* =============================
+   CARDS
+   ============================= */
+.card {
+    background-color: #041220;
+    border: 1px solid #0d3a5c !important;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.05);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    font-family: 'Share Tech Mono', monospace;
+    color: #c8ddf0;
+}
+
+/* =============================
+   BADGES
+   ============================= */
+.badge {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    padding: 0.35em 0.65em;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+.bg-success {
+    background-color: rgba(0, 255, 157, 0.15) !important;
+    color: #00ff9d !important;
+    border: 1px solid #00ff9d;
+}
+
+.bg-danger {
+    background-color: rgba(255, 58, 58, 0.15) !important;
+    color: #ff3a3a !important;
+    border: 1px solid #ff3a3a;
+}
+
+.bg-warning {
+    background-color: rgba(245, 166, 35, 0.15) !important;
+    color: #f5a623 !important;
+    border: 1px solid #f5a623;
+}
+
+/* =============================
+   BOTONES
+   ============================= */
+.btn, button {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    padding: 0.45rem 1.2rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+}
+
+    .btn-primary:hover {
+        background: #00d4ff;
+        color: #020b14;
+        box-shadow: 0 0 14px rgba(0, 212, 255, 0.4);
+    }
+
+.btn-outline-secondary {
+    background: transparent;
+    border: 1px solid #4a7fa5;
+    color: #4a7fa5;
+}
+
+    .btn-outline-secondary:hover {
+        border-color: #00d4ff;
+        color: #00d4ff;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+    }
+
+/* =============================
+   FORMULARIOS
+   ============================= */
+.form-control,
+.form-select {
+    background-color: #071a2e;
+    border: 1px solid #0d3a5c;
+    color: #c8ddf0;
+    border-radius: 2px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        background-color: #071a2e;
+        border-color: #00d4ff;
+        color: #c8ddf0;
+        box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.15);
+        outline: none;
+    }
+
+.form-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #4a7fa5;
+    margin-bottom: 0.35rem;
+}
+
+.form-select option {
+    background-color: #071a2e;
+    color: #c8ddf0;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.text-danger {
+    color: #ff3a3a !important;
+    font-size: 0.78rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+/* =============================
+   ALERTAS
+   ============================= */
+#alerta-vacia {
+    border: 1px solid #0d3a5c;
+    background-color: #041220;
+    color: #4a7fa5;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+    #alerta-vacia::before {
+        content: '// ';
+        color: #00d4ff;
+    }
+
+/* =============================
+   SCROLLBAR
+   ============================= */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020b14;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d3a5c;
+    border-radius: 2px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00d4ff;
+    }
+
+::selection {
+    background: rgba(0, 212, 255, 0.2);
+    color: #00d4ff;
+}
+
+/* =============================
+   HOME
+   ============================= */
+#home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    padding: 2rem;
+}
+
+#home-hero {
+    text-align: center;
+    max-width: 680px;
+}
+
+#home-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    color: #00ff9d;
+    margin-bottom: 1.2rem;
+}
+
+#home-title {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #00d4ff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+#home-description {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    color: #4a7fa5;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+#home-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.home-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.home-stat-value {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: #00d4ff;
+    letter-spacing: 2px;
+}
+
+.home-stat-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: #4a7fa5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.home-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: #0d3a5c;
+}
+
+#home-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2.5rem;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+    #home-cta::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #00d4ff;
+        transition: left 0.3s ease;
+        z-index: 0;
+    }
+
+    #home-cta:hover::before {
+        left: 0;
+    }
+
+    #home-cta:hover,
+    #home-cta:hover * {
+        color: #020b14 !important;
+    }
+
+#home-cta-text,
+#home-cta-arrow {
+    position: relative;
+    z-index: 1;
+}
+
+#home-cta-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+#home-cta:hover #home-cta-arrow {
+    transform: translateX(6px);
+}
+
+#home-hint {
+    margin-top: 2rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: #0d3a5c;
+    letter-spacing: 1px;
+}
+
+/* =============================
+   SCAN LINE
+   ============================= */
+body::after {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient( to bottom, transparent 0%, rgba(0, 212, 255, 0.03) 20%, rgba(0, 212, 255, 0.12) 50%, rgba(0, 212, 255, 0.03) 80%, transparent 100% );
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.2), 0 0 40px rgba(0, 212, 255, 0.1);
+    animation: scanline 7s linear infinite;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes scanline {
+    0% {
+        top: -10%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+/* =============================
+   CARDS FILTRO — altura reducida
+   ============================= */
+#card-pendientes,
+#card-exitosas,
+#card-fallidas,
+#card-todas {
+    background: transparent;
+    border: 1px solid #0d3a5c !important;
+    cursor: pointer;
+    transition: background 0.25s, border-color 0.25s, box-shadow 0.25s;
+    border-radius: 4px;
+}
+
+    #card-pendientes .card-body,
+    #card-exitosas .card-body,
+    #card-fallidas .card-body,
+    #card-todas .card-body {
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #card-pendientes .card-title,
+    #card-exitosas .card-title,
+    #card-fallidas .card-title,
+    #card-todas .card-title {
+        margin: 0;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        color: #4a7fa5;
+        transition: color 0.25s;
+    }
+
+    #card-pendientes h3,
+    #card-exitosas h3,
+    #card-fallidas h3,
+    #card-todas h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: #4a7fa5;
+        transition: color 0.25s;
+    }
+
+    /* Hover pendientes — amarillo neón */
+    #card-pendientes:hover {
+        background: rgba(245, 166, 35, 0.08);
+        border-color: #f5a623 !important;
+        box-shadow: 0 0 20px rgba(245, 166, 35, 0.3), inset 0 0 20px rgba(245, 166, 35, 0.05);
+    }
+
+        #card-pendientes:hover .card-title,
+        #card-pendientes:hover h3 {
+            color: #f5a623;
+            text-shadow: 0 0 10px rgba(245, 166, 35, 0.6);
+        }
+
+    /* Hover exitosas — verde neón */
+    #card-exitosas:hover {
+        background: rgba(0, 255, 157, 0.06);
+        border-color: #00ff9d !important;
+        box-shadow: 0 0 20px rgba(0, 255, 157, 0.25), inset 0 0 20px rgba(0, 255, 157, 0.04);
+    }
+
+        #card-exitosas:hover .card-title,
+        #card-exitosas:hover h3 {
+            color: #00ff9d;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+        }
+
+    /* Hover fallidas — rojo neón */
+    #card-fallidas:hover {
+        background: rgba(255, 58, 58, 0.08);
+        border-color: #ff3a3a !important;
+        box-shadow: 0 0 20px rgba(255, 58, 58, 0.3), inset 0 0 20px rgba(255, 58, 58, 0.05);
+    }
+
+        #card-fallidas:hover .card-title,
+        #card-fallidas:hover h3 {
+            color: #ff3a3a;
+            text-shadow: 0 0 10px rgba(255, 58, 58, 0.6);
+        }
+
+    /* Hover todas — morado neón */
+    #card-todas:hover {
+        background: rgba(148, 0, 255, 0.08);
+        border-color: #9400ff !important;
+        box-shadow: 0 0 20px rgba(148, 0, 255, 0.3), inset 0 0 20px rgba(148, 0, 255, 0.05);
+    }
+
+        #card-todas:hover .card-title,
+        #card-todas:hover h3 {
+            color: #b84dff;
+            text-shadow: 0 0 10px rgba(148, 0, 255, 0.6);
+        }
+
+    /* Estados activos */
+    #card-pendientes.card-activa {
+        background: rgba(245, 166, 35, 0.08);
+        border-color: #f5a623 !important;
+        box-shadow: 0 0 20px rgba(245, 166, 35, 0.3);
+    }
+
+        #card-pendientes.card-activa .card-title,
+        #card-pendientes.card-activa h3 {
+            color: #f5a623;
+            text-shadow: 0 0 10px rgba(245, 166, 35, 0.6);
+        }
+
+    #card-exitosas.card-activa {
+        background: rgba(0, 255, 157, 0.06);
+        border-color: #00ff9d !important;
+        box-shadow: 0 0 20px rgba(0, 255, 157, 0.25);
+    }
+
+        #card-exitosas.card-activa .card-title,
+        #card-exitosas.card-activa h3 {
+            color: #00ff9d;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+        }
+
+    #card-fallidas.card-activa {
+        background: rgba(255, 58, 58, 0.08);
+        border-color: #ff3a3a !important;
+        box-shadow: 0 0 20px rgba(255, 58, 58, 0.3);
+    }
+
+        #card-fallidas.card-activa .card-title,
+        #card-fallidas.card-activa h3 {
+            color: #ff3a3a;
+            text-shadow: 0 0 10px rgba(255, 58, 58, 0.6);
+        }
+
+    #card-todas.card-activa {
+        background: rgba(148, 0, 255, 0.08);
+        border-color: #9400ff !important;
+        box-shadow: 0 0 20px rgba(148, 0, 255, 0.3);
+    }
+
+        #card-todas.card-activa .card-title,
+        #card-todas.card-activa h3 {
+            color: #b84dff;
+            text-shadow: 0 0 10px rgba(148, 0, 255, 0.6);
+        }
+
+/* =============================
+   BOTÓN NUEVA TRANSACCIÓN
+   ============================= */
+#btn-nueva-transaccion {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.4rem;
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+    #btn-nueva-transaccion::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #00d4ff;
+        transition: left 0.25s ease;
+        z-index: 0;
+    }
+
+    #btn-nueva-transaccion:hover::before {
+        left: 0;
+    }
+
+    #btn-nueva-transaccion:hover,
+    #btn-nueva-transaccion:hover * {
+        color: #020b14 !important;
+        -webkit-text-fill-color: #020b14 !important;
+        box-shadow: 0 0 16px rgba(0, 212, 255, 0.5);
+    }
+
+    #btn-nueva-transaccion span {
+        position: relative;
+        z-index: 1;
+    }
+
+/* =============================
+   BOTÓN ACTUALIZAR TRANSACCIONES
+   ============================= */
+#btnActualizar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.4rem;
+    background: transparent;
+    border: 1px solid #00ff9d;
+    color: #00ff9d;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+}
+
+    #btnActualizar::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #00ff9d;
+        transition: left 0.25s ease;
+        z-index: 0;
+    }
+
+    #btnActualizar:hover::before {
+        left: 0;
+    }
+
+    #btnActualizar:hover,
+    #btnActualizar:hover * {
+        color: #020b14 !important;
+        -webkit-text-fill-color: #020b14 !important;
+        box-shadow: 0 0 16px rgba(0, 255, 157, 0.5);
+    }
+
+#btnActualizar-text,
+#btnActualizar-arrow {
+    position: relative;
+    z-index: 1;
+}
+
+#btnActualizar-arrow {
+    transition: transform 0.25s;
+}
+
+#btnActualizar:hover #btnActualizar-arrow {
+    transform: translateX(5px);
+}
+
+/* =============================
+   TABLAS CON SCROLL
+   ============================= */
+#contenedor-tabla-principal,
+#contenedor-tabla-eventos {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* =============================
+   FORMULARIO CREAR TRANSACCIÓN
+   ============================= */
+#form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #041220;
+    border: 1px solid #0d3a5c;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.06);
+}
+
+#form-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #0d3a5c;
+}
+
+#form-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #00ff9d;
+    margin-bottom: 0.5rem;
+}
+
+#form-titulo {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00d4ff;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+#form-subtitulo {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.85rem;
+    color: #4a7fa5;
+    margin: 0;
+}
+
+#form-transaccion .form-group {
+    position: relative;
+}
+
+#btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.8rem;
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.82rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+    #btn-submit::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #00d4ff;
+        transition: left 0.25s ease;
+        z-index: 0;
+    }
+
+    #btn-submit:hover::before {
+        left: 0;
+    }
+
+    #btn-submit:hover,
+    #btn-submit:hover * {
+        color: #020b14 !important;
+        -webkit-text-fill-color: #020b14 !important;
+    }
+
+#btn-submit-text,
+#btn-submit-arrow {
+    position: relative;
+    z-index: 1;
+}
+
+#btn-submit-arrow {
+    transition: transform 0.25s;
+}
+
+#btn-submit:hover #btn-submit-arrow {
+    transform: translateX(5px);
+}
+
+/* =============================
+   BOTÓN ELIMINAR DLQ
+   ============================= */
+#btn-eliminar-dlq {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #4a7fa5;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+    #btn-eliminar-dlq:hover {
+        color: #ff3a3a !important;
+        text-shadow: 0 0 8px rgba(255, 58, 58, 0.7);
+    }

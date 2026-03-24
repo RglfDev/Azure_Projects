@@ -1,0 +1,234 @@
+﻿@model IEnumerable<TransactionsMVCApp.Models.Transaccion>
+
+@{
+    ViewData["Title"] = "Transacciones";
+}
+
+<div id="contenedor-principal" class="container mt-4">
+
+    <div id="titulo-principal" class="text-center mb-5">
+        <h1 id="titulo-h1" class="display-5 fw-bold"> Registro de Transacciones</h1>
+        <p id="titulo-subtitulo">Consulta el estado de todas las transacciones del sistema</p>
+    </div>
+
+    <a id="btn-nueva-transaccion" asp-controller="Form" asp-action="Index">
+        <span>+ NUEVA TRANSACCIÓN</span>
+    </a>
+
+    @if (!Model.Any())
+    {
+        <div id="alerta-vacia">No hay transacciones registradas aún.</div>
+    }
+    else
+    {
+        <div id="contenedor-tabla-principal" class="table-responsive mb-5">
+            <table id="tabla-transacciones" class="table align-middle">
+                <thead id="tabla-thead">
+                    <tr>
+                        <th>#</th>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                        <th>Cuenta Destino</th>
+                        <th>Estado</th>
+                        <th>Fecha Creación</th>
+                        <th>Fecha Procesamiento</th>
+                        <th>Fecha Notificación</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-tbody">
+                    @foreach (var t in Model)
+                    {
+                        <tr>
+                            <td>@t.TransaccionId</td>
+                            <td>@t.TipoTransaccion</td>
+                            <td id="monto-@t.TransaccionId">@t.Monto.ToString("C2")</td>
+                            <td><code> **** @t.CuentaDestino?.Substring(t.CuentaDestino.Length - 4)</code></td>
+                            <td>
+                                @{
+                                    var badgeClass = t.Estado switch
+                                    {
+                                        "Exitosa" => "bg-success",
+                                        "Fallida" => "bg-danger",
+                                        _ => "bg-warning text-dark"
+                                    };
+                                }
+                            <span id="badge-estado-@t.TransaccionId" class="badge @badgeClass">@t.Estado</span>
+                            </td>
+                            <td>@t.FechaCreacion.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td>
+                            @(t.FechaProcesamiento.HasValue
+                                                    ? t.FechaProcesamiento.Value.ToString("dd/MM/yyyy HH:mm")
+                                                    : "-")
+                            </td>
+                            <td>
+                            @(t.FechaNotificacion.HasValue
+                                                    ? t.FechaNotificacion.Value.ToString("dd/MM/yyyy HH:mm")
+                                                    : "-")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div id="contenedor-btn-actualizar" class="d-flex justify-content-center mb-5">
+            <a id="btnActualizar" asp-action="ReceiveMessageFromQueue">
+                <span id="btnActualizar-text">PROCESAR PENDIENTES</span>
+                <span id="btnActualizar-arrow">→</span>
+            </a>
+        </div>
+    }
+
+    <div id="contenedor-cards" class="row mb-5">
+        <div id="card-col-pendientes" class="col-md-3">
+            <a asp-controller="Transaccion" asp-action="Index" asp-route-estado="Pendiente" style="text-decoration:none">
+                <div id="card-pendientes" class="card text-center @(ViewBag.EstadoActual == "Pendiente" ? "card-activa" : "")">
+                    <div class="card-body">
+                        <h5 id="card-titulo-pendientes" class="card-title">⏳ Pendientes</h5>
+                        <h3 id="card-count-pendientes">@ViewBag.TotalPendientes</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="card-col-exitosas" class="col-md-3">
+            <a asp-controller="Transaccion" asp-action="Index" asp-route-estado="Exitosa" style="text-decoration:none">
+                <div id="card-exitosas" class="card text-center @(ViewBag.EstadoActual == "Exitosa" ? "card-activa" : "")">
+                    <div class="card-body">
+                        <h5 id="card-titulo-exitosas" class="card-title">✅ Exitosas</h5>
+                        <h3 id="card-count-exitosas">@ViewBag.TotalExitosas</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="card-col-fallidas" class="col-md-3">
+            <a asp-controller="Transaccion" asp-action="Index" asp-route-estado="Fallida" style="text-decoration:none">
+                <div id="card-fallidas" class="card text-center @(ViewBag.EstadoActual == "Fallida" ? "card-activa" : "")">
+                    <div class="card-body">
+                        <h5 id="card-titulo-fallidas" class="card-title">❌ Fallidas</h5>
+                        <h3 id="card-count-fallidas">@ViewBag.TotalFallidas</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="card-col-todas" class="col-md-3">
+            <a asp-controller="Transaccion" asp-action="Index" style="text-decoration:none">
+                <div id="card-todas" class="card text-center @(ViewBag.EstadoActual == null ? "card-activa" : "")">
+                    <div class="card-body">
+                        <h5 id="card-titulo-todas" class="card-title">🔍 Todas</h5>
+                        <h3 id="card-count-todas">@(ViewBag.TotalPendientes + ViewBag.TotalExitosas + ViewBag.TotalFallidas)</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(ViewBag.EstadoActual as string))
+    {
+        <div class="d-flex justify-content-center mb-3">
+            <a id="btn-reset-filtro" asp-controller="Transaccion" asp-action="Index">
+                <span>MOSTRAR TODAS</span>
+                <span>×</span>
+            </a>
+        </div>
+    }
+
+    <a asp-action="MonitorDLQ" class="btn btn-outline-danger btn-sm shadow-sm mb-3">
+        <i class="bi bi-trash"></i> TRANSACCIONES FALLIDAS
+    </a>
+
+    <div id="contenedor-tablas-inferiores" class="row">
+
+        <div id="col-notificaciones" class="col-md-6">
+            <h5 id="titulo-notificaciones" class="fw-semibold mb-3"> Notificaciones al Cliente</h5>
+            <div id="contenedor-tabla-notificaciones" class="table-responsive">
+                <table id="tabla-notificaciones" class="table align-middle">
+                    <thead id="tabla-notificaciones-thead">
+                        <tr>
+                            <th>#</th>
+                            <th>Email</th>
+                            <th>Estado</th>
+                            <th>Fecha Envío</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-notificaciones-tbody">
+                        @{
+                            var notificaciones = Model
+                            .Where(t => t.Notificacion != null)
+                            .Select(t => t.Notificacion!)
+                            .ToList();
+                        }
+                        @if (!notificaciones.Any())
+                        {
+                            <tr>
+                                <td id="notificaciones-vacio" colspan="4" class="text-center">Sin notificaciones aún</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var n in notificaciones)
+                            {
+                                <tr>
+                                    <td>@n.TransaccionId</td>
+                                    <td>@n.EmailCliente</td>
+                                    <td>
+                                        <span id="badge-notificacion-@n.NotificacionId" class="badge @(n.EstadoNotificacion == "Enviada" ? "bg-success" : "bg-danger")">
+                                            @n.EstadoNotificacion
+                                        </span>
+                                    </td>
+                                    <td>@n.FechaEnvio.ToString("dd/MM/yyyy HH:mm")</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="col-eventos" class="col-md-6">
+            <h5 id="titulo-eventos" class="fw-semibold mb-3"> Eventos del Topic</h5>
+            <div id="contenedor-tabla-eventos" class="table-responsive">
+                <table id="tabla-eventos" class="table align-middle">
+                    <thead id="tabla-eventos-thead">
+                        <tr>
+                            <th>#Transacción</th>
+                            <th>Tipo Evento</th>
+                            <th>Descripción</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-eventos-tbody">
+                        @{
+                            var eventos = Model
+                            .Where(t => t.Eventos != null && t.Eventos.Any())
+                            .SelectMany(t => t.Eventos!)
+                            .OrderByDescending(e => e.TransaccionId)
+                            .ToList();
+                        }
+                        @if (!eventos.Any())
+                        {
+                            <tr>
+                                <td id="eventos-vacio" colspan="4" class="text-center">Sin eventos aún</td>
+                            </tr>
+                        }
+                        else
+                        {
+                            @foreach (var ev in eventos)
+                            {
+                                <tr>
+                                    <td>@ev.TransaccionId</td>
+                                    <td>
+                                        <span id="badge-evento-@ev.EventoId" class="badge @(ev.TipoEvento.Contains("aprobada") ? "bg-success" : "bg-danger")">
+                                            @ev.TipoEvento
+                                        </span>
+                                    </td>
+                                    <td>@(ev.Descripcion ?? "-")</td>
+                                    <td>@ev.FechaEvento.ToString("dd/MM/yyyy HH:mm")</td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

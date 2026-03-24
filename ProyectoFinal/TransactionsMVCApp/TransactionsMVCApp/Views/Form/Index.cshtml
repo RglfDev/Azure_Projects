@@ -1,0 +1,58 @@
+﻿@model TransactionsMVCApp.Models.Transaccion
+
+@{
+    ViewData["Title"] = "Crear Transacción";
+}
+
+<div id="form-container">
+
+    <div id="form-header">
+        <p id="form-label">NUEVA OPERACIÓN</p>
+        <h2 id="form-titulo">Crear Transacción</h2>
+        <p id="form-subtitulo">Rellena los datos para enviar la transacción a la cola de procesamiento</p>
+    </div>
+
+    <form id="form-transaccion" asp-action="Create" method="post">
+
+        <div id="form-group-monto" class="form-group mb-3">
+            <label asp-for="Monto" class="form-label"></label>
+            <input asp-for="Monto" class="form-control" type="number" />
+            <span asp-validation-for="Monto" class="text-danger"></span>
+        </div>
+
+        <div id="form-group-tipo" class="form-group mb-3">
+            <label asp-for="TipoTransaccion" class="form-label"></label>
+            <select asp-for="TipoTransaccion" class="form-select">
+                <option value="">-- Selecciona tipo --</option>
+                <option value="PagoConTarjeta">Pago con Tarjeta</option>
+                <option value="TransferenciaBancaria">Transferencia Bancaria</option>
+            </select>
+            <span asp-validation-for="TipoTransaccion" class="text-danger"></span>
+        </div>
+
+        <div id="form-group-cuenta" class="form-group mb-3">
+            <label asp-for="CuentaDestino" class="form-label"></label>
+            <input asp-for="CuentaDestino" class="form-control" maxlength="16" minlength="16" />
+            <span asp-validation-for="CuentaDestino" class="text-danger"></span>
+        </div>
+
+        <div id="form-group-detalles" class="form-group mb-3">
+            <label asp-for="DetallesAdicionales" class="form-label"></label>
+            <textarea asp-for="DetallesAdicionales" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="DetallesAdicionales" class="text-danger"></span>
+        </div>
+
+        <div id="form-group-submit">
+            <button id="btn-submit" type="submit">
+                <span id="btn-submit-text">ENVIAR TRANSACCIÓN</span>
+                <span id="btn-submit-arrow">→</span>
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<dynamic>
+
+<link rel="stylesheet" href="~/css/pagos.css" />
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="hero-title text-white">Mensajes <span class="text-danger">No Entregados</span></h2>
+        <a asp-action="Index" class="btn btn-outline-light btn-sm">Volver a Transacciones</a>
+    </div>
+
+    <div class="panel-card border-danger shadow">
+        <div class="panel-header bg-danger text-white">
+            <i class="bi bi-exclamation-triangle"></i> Dead Letter Queue (Sub-cola de errores)
+        </div>
+        <div class="table-responsive">
+            <table class="pago-table w-100">
+                <thead>
+                    <tr>
+                        <th>ID Transacción</th>
+                        <th>Monto</th>
+                        <th>Motivo del Error</th>
+                        <th>Fecha</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center py-4 text-muted">La cola de errores está vacía.</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><span class="badge bg-dark text-danger border border-danger">#@item.Cuerpo.TransaccionId</span></td>
+                            <td>@item.Cuerpo.Monto.ToString("C")</td>
+                            <td class="text-warning small">@item.Motivo</td>
+                            <td class="fecha">@item.Fecha.ToString("HH:mm:ss")</td>
+                            <td>
+                                <a asp-action="EliminarDeDLQ" id="btn-eliminar-dlq">
+                                    <i class="bi bi-trash"></i> Eliminar
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="home-container">
+
+    <div id="home-hero">
+        <p id="home-label">SISTEMA DE PAGOS ELECTRÓNICOS</p>
+        <h1 id="home-title">AzureTransactionsApp</h1>
+        <p id="home-description">
+            Plataforma de procesamiento de transacciones ficticias en tiempo real.
+            Gestiona pagos con tarjeta y transferencias bancarias con validación automática,
+            trazabilidad de eventos y notificaciones instantáneas mediante
+            Azure Service Bus.
+        </p>
+
+        <div id="home-stats">
+            <div class="home-stat">
+                <span class="home-stat-value">Azure</span>
+                <span class="home-stat-label">Infraestructura</span>
+            </div>
+        </div>
+
+        <a id="home-cta" asp-controller="Transaccion" asp-action="Index">
+            <span id="home-cta-text">ACCEDER AL PANEL</span>
+            <span id="home-cta-arrow">→</span>
+        </a>
+
+        <p id="home-hint">// Powered by Azure Service Bus + Entity Framework Core</p>
+    </div>
+
+</div>
