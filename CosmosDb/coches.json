@@ -1,0 +1,14 @@
+[
+    { "id": "1", "make": "Honda", "model": "Accord" },
+    { "id": "2", "make": "Seat", "model": "Panda" },
+    { "id": "3", "make": "Toyota", "model": "Corolla" },
+    { "id": "4", "make": "Ford", "model": "Focus" },
+    { "id": "5", "make": "Chevrolet", "model": "Cruze" },
+    { "id": "6", "make": "BMW", "model": "X5" },
+    { "id": "7", "make": "Mercedes", "model": "C-Class" },
+    { "id": "8", "make": "Audi", "model": "A4" },
+    { "id": "9", "make": "Volkswagen", "model": "Golf" },
+    { "id": "10", "make": "Hyundai", "model": "Elantra" },
+    { "id": "11", "make": "Nissan", "model": "Altima" },
+    { "id": "12", "make": "Mazda", "model": "CX-5" }
+]

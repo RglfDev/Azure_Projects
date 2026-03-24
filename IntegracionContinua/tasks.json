@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "Title": "Aprender Angular básico",
+    "IsCompleted": false
+  },
+  {
+    "id": "2",
+    "Title": "Crear API en .NET 8",
+    "IsCompleted": true
+  },
+  {
+    "id": "3",
+    "Title": "Configurar Cosmos DB",
+    "IsCompleted": false
+  },
+  {
+    "id": "4",
+    "Title": "Desplegar en Azure App Service",
+    "IsCompleted": false
+  },
+  {
+    "id": "5",
+    "Title": "Publicar Angular en Static Web Apps",
+    "IsCompleted": false
+  },
+  {
+    "id": "6",
+    "Title": "Probar endpoints con Postman",
+    "IsCompleted": true
+  },
+  {
+    "id": "7",
+    "Title": "Configurar CORS correctamente",
+    "IsCompleted": false
+  },
+  {
+    "id": "8",
+    "Title": "Hacer commit en GitHub",
+    "IsCompleted": true
+  },
+  {
+    "id": "9",
+    "Title": "Revisar logs en Azure",
+    "IsCompleted": false
+  },
+  {
+    "id": "10",
+    "Title": "Preparar entrega del laboratorio",
+    "IsCompleted": false
+  }
+]

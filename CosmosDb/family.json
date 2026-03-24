@@ -1,0 +1,78 @@
+[
+  {
+    "id": "AndersenFamily",
+    "LastName": "Andersen",
+    "Parents": [
+      {
+        "FamilyName": "Andersen",
+        "FirstName": "Thomas"
+      },
+      {
+        "FamilyName": "Andersen",
+        "FirstName": "Mary Kay"
+      }
+    ],
+    "Children": [
+      {
+        "FamilyName": "Andersen",
+        "FirstName": "Henriette Thaulow",
+        "Gender": "female",
+        "Grade": 5,
+        "Pets": [
+          {
+            "GivenName": "Fluffy"
+          }
+        ]
+      }
+    ],
+    "Address": {
+      "State": "WA",
+      "County": "King",
+      "City": "Seattle"
+    },
+    "IsRegistered": true
+  },
+  {
+    "id": "WakefieldFamily",
+    "LastName": "Wakefield",
+    "Parents": [
+      {
+        "FamilyName": "Wakefield",
+        "FirstName": "Robin"
+      },
+      {
+        "FamilyName": "Miller",
+        "FirstName": "Ben"
+      }
+    ],
+    "Children": [
+      {
+        "FamilyName": "Miller",
+        "FirstName": "Jesse",
+        "Gender": "male",
+        "Grade": 8,
+        "Pets": [
+          {
+            "GivenName": "Goofy"
+          },
+          {
+            "GivenName": "Shadow"
+          }
+        ]
+      },
+      {
+        "FamilyName": "Miller",
+        "FirstName": "Lisa",
+        "Gender": "female",
+        "Grade": 3,
+        "Pets": []
+      }
+    ],
+    "Address": {
+      "State": "NY",
+      "County": "Manhattan",
+      "City": "New York"
+    },
+    "IsRegistered": false
+  }
+]

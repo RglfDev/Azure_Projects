@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "TasksApi.Controllers.TasksController",
+    "Method": "Get",
+    "RelativePath": "api/Tasks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TasksApi.Controllers.TasksController",
+    "Method": "Post",
+    "RelativePath": "api/Tasks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "item",
+        "Type": "TasksApi.Models.TaskItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

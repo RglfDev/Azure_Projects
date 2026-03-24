@@ -1,0 +1,7 @@
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\WebApplication1MV.exe
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\WebApplication1MV.dll
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\WebApplication1MV.deps.json
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\WebApplication1MV.runtimeconfig.json
+C:\Users\Administrador\Desktop\Azure\Proyectos\VMRedes\WebApplication1MV\WebApplication1MV\obj\Release\net8.0\PubTmp\Out\WebApplication1MV.pdb

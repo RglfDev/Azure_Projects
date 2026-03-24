@@ -1,0 +1,10 @@
+﻿[
+  {"id":"1","CategoryName":"Beverages","Description":"Soft drinks, coffees, teas, beers, and ales","Picture":"https://api.ejemplo.combeverages.jpg"},
+  {"id":"2","CategoryName":"Condiments","Description":"Sweet and savory sauces, relishes, spreads, and seasonings","Picture":"https://api.ejemplo.comcondiments.jpg"},
+  {"id":"3","CategoryName":"Confections","Description":"Desserts, candies, and sweet breads","Picture":"https://api.ejemplo.comconfections.jpg"},
+  {"id":"4","CategoryName":"Dairy Products","Description":"Cheeses","Picture":"https://api.ejemplo.comdairy_products.jpg"},
+  {"id":"5","CategoryName":"Grains/Cereals","Description":"Breads, crackers, pasta, and cereal","Picture":"https://api.ejemplo.comgrains/cereals.jpg"},
+  {"id":"6","CategoryName":"Meat/Poultry","Description":"Prepared meats","Picture":"https://api.ejemplo.commeat/poultry.jpg"},
+  {"id":"7","CategoryName":"Produce","Description":"Dried fruit and bean curd","Picture":"https://api.ejemplo.comproduce.jpg"},
+  {"id":"8","CategoryName":"Seafood","Description":"Seaweed and fish","Picture":"https://api.ejemplo.comseafood.jpg"}
+]

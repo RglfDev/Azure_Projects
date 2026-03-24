@@ -1,0 +1,204 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|c:\\users\\administrador\\desktop\\azure\\proyectos\\integracioncontinua\\proyectofullstackazure\\tasksapi\\tasksapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|solutionrelative:tasksapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|c:\\users\\administrador\\desktop\\azure\\proyectos\\integracioncontinua\\proyectofullstackazure\\tasksapi\\tasksapi\\services\\cosmosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|solutionrelative:tasksapi\\services\\cosmosservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|c:\\users\\administrador\\desktop\\azure\\proyectos\\integracioncontinua\\proyectofullstackazure\\tasksapi\\tasksapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|solutionrelative:tasksapi\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|c:\\users\\administrador\\desktop\\azure\\proyectos\\integracioncontinua\\proyectofullstackazure\\tasksapi\\tasksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|solutionrelative:tasksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|c:\\users\\administrador\\desktop\\azure\\proyectos\\integracioncontinua\\proyectofullstackazure\\tasksapi\\tasksapi\\tasksapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|solutionrelative:tasksapi\\tasksapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|c:\\users\\administrador\\desktop\\azure\\proyectos\\integracioncontinua\\proyectofullstackazure\\tasksapi\\tasksapi\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C16E96A-8F2D-4BA2-AB9E-266A42BA71A4}|TasksApi\\TasksApi.csproj|solutionrelative:tasksapi\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 18,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:13:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:14:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:618693198:0:{13143d73-808b-4a2f-bebb-ccbe9c93fe37}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\appsettings.json",
+              "RelativeDocumentMoniker": "TasksApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\appsettings.json",
+              "RelativeToolTip": "TasksApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-17T08:48:11.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TasksApi.csproj",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\TasksApi.csproj",
+              "RelativeDocumentMoniker": "TasksApi\\TasksApi.csproj",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\TasksApi.csproj",
+              "RelativeToolTip": "TasksApi\\TasksApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-17T08:29:22.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Program.cs",
+              "RelativeDocumentMoniker": "TasksApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Program.cs",
+              "RelativeToolTip": "TasksApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T08:27:57.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "TasksApi\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "TasksApi\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T08:19:42.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CosmosService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Services\\CosmosService.cs",
+              "RelativeDocumentMoniker": "TasksApi\\Services\\CosmosService.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Services\\CosmosService.cs",
+              "RelativeToolTip": "TasksApi\\Services\\CosmosService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T08:15:13.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TaskItem.cs",
+              "DocumentMoniker": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Models\\TaskItem.cs",
+              "RelativeDocumentMoniker": "TasksApi\\Models\\TaskItem.cs",
+              "ToolTip": "C:\\Users\\Administrador\\Desktop\\Azure\\Proyectos\\IntegracionContinua\\ProyectoFullStackAzure\\TasksApi\\TasksApi\\Models\\TaskItem.cs",
+              "RelativeToolTip": "TasksApi\\Models\\TaskItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T08:14:13.753Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 97,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

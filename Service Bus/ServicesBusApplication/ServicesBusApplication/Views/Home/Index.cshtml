@@ -1,0 +1,155 @@
+﻿@{
+    ViewData["Title"] = "Azure Service Bus";
+}
+
+<div class="container py-4">
+
+    <!-- Header -->
+    <div class="d-flex align-items-center mb-4">
+        <i class="bi bi-bus-front fs-2 text-primary me-3"></i>
+        <div>
+            <h2 class="mb-0 fw-bold">Azure Service Bus</h2>
+            <small class="text-muted">Gestión de mensajes en cola y suscripciones</small>
+        </div>
+    </div>
+
+    <!-- Cards de envío -->
+    <div class="row g-4 mb-4">
+
+        <!-- Enviar a Cola -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-header bg-primary text-white">
+                    <i class="bi bi-collection me-2"></i>Enviar a Cola
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="SendMessageToQueue">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Mensaje</label>
+                            <input type="text" name="message" required
+                                   class="form-control"
+                                   placeholder="Escribe tu mensaje para la cola..." />
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="bi bi-send me-2"></i>Enviar a Cola
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Enviar a Tema -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-header bg-success text-white">
+                    <i class="bi bi-diagram-3 me-2"></i>Enviar al Tema
+                </div>
+                <div class="card-body">
+                    <form method="post" asp-action="SendMessageToTopic">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Mensaje</label>
+                            <input type="text" name="message" required
+                                   class="form-control"
+                                   placeholder="Escribe tu mensaje para el tema..." />
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="bi bi-send me-2"></i>Enviar al Tema
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones de recepción -->
+    <div class="d-flex gap-3 mb-4">
+        <button id="receiveQueueMessages" class="btn btn-outline-primary">
+            <i class="bi bi-inbox me-2"></i>Recibir Mensajes de la Cola
+        </button>
+        <button id="receiveSubscriptionMessages" class="btn btn-outline-success">
+            <i class="bi bi-bell me-2"></i>Recibir Mensajes de la Suscripción
+        </button>
+    </div>
+
+    <!-- Tablas -->
+    <div class="row g-4">
+
+        <!-- Tabla Cola -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-collection me-2"></i>Mensajes de la Cola</span>
+                    <span class="badge bg-white text-primary" id="queueCount">0</span>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-striped mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th><i class="bi bi-chat-text me-1"></i>Mensaje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="queueMessages">
+                            <tr>
+                                <td class="text-muted fst-italic">
+                                    <i class="bi bi-inbox me-1"></i>No hay mensajes aún.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla Suscripción -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-diagram-3 me-2"></i>Mensajes de la Suscripción</span>
+                    <span class="badge bg-white text-success" id="subCount">0</span>
+                </div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-striped mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th><i class="bi bi-chat-text me-1"></i>Mensaje</th>
+                            </tr>
+                        </thead>
+                        <tbody id="subscriptionMessages">
+                            <tr>
+                                <td class="text-muted fst-italic">
+                                    <i class="bi bi-inbox me-1"></i>No hay mensajes aún.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Icons (añade esto en _Layout.cshtml si no lo tienes) -->
+@section Scripts {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+    <script>
+                document.getElementById("receiveQueueMessages").addEventListener("click", function () {
+            fetch("/Home/ReceiveMessageFromQueue")
+                .then(response => response.text())
+                .then(data => {
+                    let tbody = document.getElementById("queueMessages");
+                    let newRow = `<tr><td>${data}</td></tr>`;
+                    tbody.innerHTML += newRow;
+                });
+        });
+
+        document.getElementById("receiveSubscriptionMessages").addEventListener("click", function () {
+            fetch("/Home/ReceiveMessageFromSubscription")
+                .then(response => response.text())
+                .then(data => {
+                    let tbody = document.getElementById("subscriptionMessages");
+                    let newRow = `<tr><td>${data}</td></tr>`;
+                    tbody.innerHTML += newRow;
+                });
+        });
+    </script>
+}

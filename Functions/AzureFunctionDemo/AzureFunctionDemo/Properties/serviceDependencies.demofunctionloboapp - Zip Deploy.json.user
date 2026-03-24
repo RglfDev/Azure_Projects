@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "storage1": {
+      "restored": true,
+      "restoreTime": "2026-03-03T11:57:22.5396849Z"
+    }
+  },
+  "parameters": {
+    "storage1.resourceGroupName": {
+      "Name": "storage1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "femofunctionlobo"
+    },
+    "storage1.subscriptionId": {
+      "Name": "storage1.subscriptionId",
+      "Type": "subscription",
+      "Value": "6220345c-af05-414b-9c22-63fcd8820476"
+    }
+  }
+}

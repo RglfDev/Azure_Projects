@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "MakeAPI_Cosmos.Controllers.CarController",
+    "Method": "Get",
+    "RelativePath": "api/Car",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MakeAPI_Cosmos.Controllers.CarController",
+    "Method": "Post",
+    "RelativePath": "api/Car",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newCar",
+        "Type": "MakeAPI_Cosmos.Models.Car",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MakeAPI_Cosmos.Controllers.CarController",
+    "Method": "Put",
+    "RelativePath": "api/Car",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carToUpdate",
+        "Type": "MakeAPI_Cosmos.Models.Car",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MakeAPI_Cosmos.Controllers.CarController",
+    "Method": "Delete",
+    "RelativePath": "api/Car",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "make",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

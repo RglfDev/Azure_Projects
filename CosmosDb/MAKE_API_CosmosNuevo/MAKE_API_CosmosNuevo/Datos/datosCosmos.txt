@@ -1,0 +1,13 @@
+{
+    "id": "1",
+    "make": "Honda",
+    "model": "Accord"
+}
+{
+    "id": "2",
+    "make": "Seat",
+    "model": "Panda"
+}
+
+databaseName : Vehicles
+containerName: Car
